@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en" manifest="manifest.appcache">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>TP</title>
+		<script src="util/jquery-1.11.0.min.js"></script>
+		<script src="util/bootstrap/js/bootstrap.min.js"></script>
+		<script src="tp_script.js"></script>
+		<link rel="stylesheet" type="text/css" href="util/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="tp_style.css">
+	</head>
+	<body class="bg-info">
+		<div class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-header"></div>
+				<div class="modal-content">	
+					<button id="btnSupp" class="btn btn-info pull-left">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+					
+					<button class="btn btn-info pull-right" data-dismiss="modal">
+						<span class="glyphicon glyphicon-remove-circle"></span>
+					</button>
+					
+					<img id="leImg" class="center-block img-responsive">						
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+		
+		<div class="row bg-primary">
+			<h1 class="text-center col-md-12">InstantPic <span class="glyphicon glyphicon-camera"></span></h1>
+		</div>
+		
+		<div class="container jumbotron">			
+			<div class="row">
+				<div id="divCanvas" class="well col-md-8">
+					<canvas id="monCanvas" class="img-responsive hidden"></canvas>
+					<video id="maCam" class="img-responsive"></video>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="btn-group col-xs-12 col-md-10 col-md-offset-1">
+						<button class="btn btn-info btn-lg col-xs-4 col-md-4" id="cam" data-placement="top" title="Allumer camera">
+							<span class="glyphicon glyphicon-facetime-video"></span>
+						</button>						
+						
+						<button class="btn btn-info btn-lg col-xs-4 col-xs-4 col-md-4" id="saveToGlr" data-placement="top" title="Sauveguarder dans la gallerie">
+							<span class="glyphicon glyphicon-floppy-disk"></span>
+						</button>
+						
+						<button class="btn btn-info btn-lg col-xs-4 col-xs-4 col-md-4" id="download" data-placement="top" title="Download">
+							<span class="glyphicon glyphicon-download"></span>
+						</button>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="form-group col-md-10 col-md-offset-1">
+						<div class="input-group col-xs-12">
+							<span class="label label-danger col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0" for="range-red">Rouge</span>
+							
+							<div class="col-md-9">
+								<input type="range" id="range-red" class="input-lg" min="0" max="255">
+							</div>
+						</div>
+						
+						<div class="input-group col-xs-12">
+							<span class="label label-success col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0" for="range-green">Vert</span>
+							
+							<div class="col-md-9">
+								<input type="range" id="range-green" class="input-lg" min="0" max="255">
+							</div>
+						</div>
+						
+						<div class="input-group col-xs-12">
+							<span class="label label-primary col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0" for="range-blue">Bleu</span>
+							
+							<div class="col-md-9">
+								<input type="range" id="range-blue" class="input-lg" min="0" max="255">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0">					
+					<div id="monCarousel" class="carousel">					
+						<div class="carousel-inner center-block img-responsive"></div>
+						
+						<a class="left carousel-control" href="#monCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						
+						<a class="right carousel-control" href="#monCarousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>			
+				</div>
+			</div>						
+		</div>
+	</body>
+</html>

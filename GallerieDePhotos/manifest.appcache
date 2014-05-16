@@ -1,0 +1,21 @@
+CACHE MANIFEST
+
+CACHE:
+# 2/12/2014 v1.0.3
+util\jquery-1.11.0.min.js
+util\bootstrap\js\bootstrap.min.js
+tp_script.js
+util\bootstrap\css\bootstrap.min.css
+tp_style.css
+
+NETWORK:
+util\bootstrap\fonts\glyphicons-halflings-regular.eot
+util\bootstrap\fonts\glyphicons-halflings-regular.svg
+util\bootstrap\fonts\glyphicons-halflings-regular.ttf
+util\bootstrap\fonts\glyphicons-halflings-regular.woff
+
+SETTINGS:
+prefer-online
+
+FALLBACK:
+offline.html
